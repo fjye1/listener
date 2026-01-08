@@ -6,8 +6,8 @@ import os
 load_dotenv()
 
 RENDER_DATABASE_URL = os.getenv("RENDER_DATABASE_URL")
-ENVIRONMENT_PATH = os.getenv("local_path")
-PROGRAM_PATH = os.getenv("local_program")
+ENVIRONMENT_PATH = os.getenv("ENVIRONMENT_PATH")
+PROGRAM_PATH = os.getenv("PROGRAM_PATH")
 
 
 conn = psycopg2.connect(RENDER_DATABASE_URL)

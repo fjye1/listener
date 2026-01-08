@@ -24,12 +24,14 @@ while True:
         notify = conn.notifies.pop(0)
         task_id = notify.payload
         print(f"Triggering run_worker.py for task {task_id}")
-
+        log_path = "/home/frede/listener/worker.log"
         # Spawn the full worker script in its own process
-        subprocess.Popen([
-            ENVIRONMENT_PATH,
-            PROGRAM_PATH
-        ])
+        with open(log_path, "ab") as f:
+            subprocess.Popen(
+                [ENVIRONMENT_PATH, PROGRAM_PATH],
+                stdout=f,
+                stderr=f
+            )
 
 
 

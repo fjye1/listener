@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 import os
 load_dotenv()
 
-RENDER_DATABASE_URL = os.getenv("RENDER_DATABASE_URL")
+RENDER_DATABASE_URL = os.getenv("DATABASE_INDIA")
 ENVIRONMENT_PATH = os.getenv("ENVIRONMENT_PATH")
 PROGRAM_PATH = os.getenv("PROGRAM_PATH")
 
